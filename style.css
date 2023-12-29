@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --orange: hsl(25, 97%, 53%);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--veryDarkBlue);
+  color: var(--white);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 340px;
+}
+
+.rating-state,
+.thankyou-state {
+  border-radius: 20px;
+  background-color: var(--darkBlue);
+  padding: 20px;
+  font-family: "Overpass";
+}
+
+.rating-state p,
+.thankyou-state p {
+  font-size: 15px;
+  color: var(--lightGrey);
+  line-height: 1.4;
+}
+
+.rating-state img {
+  background-color: hsla(216, 12%, 54%, 0.5);
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  box-sizing: content-box;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.rating-state h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.rating-state p {
+  margin-bottom: 30px;
+}
+
+.rating-state .ratings {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-state .ratings .rating-star {
+  background-color: hsla(216, 12%, 54%, 0.5);
+  padding: 10px;
+  width: 18px;
+  height: 18px;
+  box-sizing: content-box;
+  border-radius: 100%;
+  color: var(--lightGrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rating-state button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--orange);
+  border: transparent;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.thankyou-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.thankyou-state img {
+  margin-bottom: 30px;
+  height: 90px;
+  width: auto;
+}
+
+.thankyou-state p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(216, 12%, 54%, 0.5);
+  padding: 8px 12px;
+  border-radius: 50px;
+  color: var(--orange);
+  margin-bottom: 30px;
+}
+
+.thankyou-state h2 {
+  margin-bottom: 10px;
+}
+
+.rating-state .ratings span:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating-state button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
